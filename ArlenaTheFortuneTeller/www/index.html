@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <!--
+        Customize the content security policy in the meta tag below as needed. Add 'unsafe-inline' to default-src to enable inline JavaScript.
+        For details, see http://go.microsoft.com/fwlink/?LinkID=617521
+    -->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+        
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile.icons-1.4.5.min.css" />`
+
+        <title>ArlenaTheFortuneTeller</title>
+    </head>
+    <body>
+
+        <script type="text/javascript" src="scripts/jquery.min.js"></script>
+        <script type="text/javascript" src="scripts/jquery.mobile-1.4.5.min.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+        <script type="text/javascript" src="scripts/index.js"></script>
+        <script type="text/javascript" src="scripts/fortune.js"></script>
+
+
+        <div data-role="page" id="fortune-page">
+            <div data-role="header">
+                <h1 id="app-title">Arlena's Fortune</h1>
+                <a href="/" class="ui-btn ui-btn-left ui-btn-corner-all ui-icon-home ui-btn-icon-notext" rel="external">Home</a>
+            </div>
+            <div role="main" class="ui-content">
+                <p>This App channels Arlena's magically powers through a simple set of questions which allows it to peer into your future.</p>
+                <p>So if you wish to see what awaits in your future proceed. But beware knowledge of the future can be present itself as both a blessing and a curse.</p>
+                <form id="dataForm">
+                    <div data-role="collapsible-set">
+                        <div data-role="collapsible">
+                            <h2>Your name:</h2>
+                            <fieldset data-role="controlgroup" data-mini="true" id="controlgroup-text-username">
+                                <legend>Please enter your full name?</legend>
+                                <label for="users-name">Enter name:</label>
+                                <input name="text-users-name" id="users-name" type="text" placeholder="e.g. Bob" />
+                            </fieldset>
+                        </div>
+                        <div data-role="collapsible">
+                            <h2>Your favourite colour:</h2>
+                            <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" id="controlgroup-choice-colour">
+                                <legend class="f-choice-colour">Select Colour:</legend>
+                                <label class="f-choice-colour" for="choice-red">Red</label>
+                                <input class="f-choice-colour" name="radio-choice-colour" id="choice-red" type="radio" value="red" />
+                                <label class="f-choice-colour" for="choice-blue">Blue</label>
+                                <input class="f-choice-colour" name="radio-choice-colour" id="choice-blue" type="radio" value="blue" />
+                                <label class="f-choice-colour" for="choice-green">Green</label>
+                                <input class="f-choice-colour" name="radio-choice-colour" id="choice-green" type="radio" value="green" />
+                                <label class="f-choice-colour" for="choice-yellow">Yellow</label>
+                                <input class="f-choice-colour" name="radio-choice-colour" id="choice-yellow" type="radio" value="yellow" />
+                            </fieldset>
+                        </div>
+                        <div data-role="collapsible">
+                            <h2>Your favorite number:</h2>
+                            <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" id="controlgroup-choice-number">
+                                <legend class="f-choice-number">Select Number:</legend>
+                                <label class="f-choice-number" for="choice-1">1</label>
+                                <input class="f-choice-number" name="radio-choice-number" id="choice-1" type="radio" value="1" />
+                                <label class="f-choice-number" for="choice-2">2</label>
+                                <input class="f-choice-number" name="radio-choice-number" id="choice-2" type="radio" value="2" />
+                                <label class="f-choice-number" for="choice-3">3</label>
+                                <input class="f-choice-number" name="radio-choice-number" id="choice-3" type="radio" value="3" />
+                                <label class="f-choice-number" for="choice-4">4</label>
+                                <input class="f-choice-number" name="radio-choice-number" id="choice-4" type="radio" value="4" />
+                                <label class="f-choice-number" for="choice-5">5</label>
+                                <input class="f-choice-number" name="radio-choice-number" id="choice-5" type="radio" value="5" />
+                                <label class="f-choice-number" for="choice-6">6</label>
+                                <input class="f-choice-number" name="radio-choice-number" id="choice-6" type="radio" value="6" />
+                                <label class="f-choice-number" for="choice-7">7</label>
+                                <input class="f-choice-number" name="radio-choice-number" id="choice-7" type="radio" value="7" />
+                                <label class="f-choice-number" for="choice-8">8</label>
+                                <input class="f-choice-number" name="radio-choice-number" id="choice-8" type="radio" value="8" />
+                            </fieldset>
+                        </div>
+                    </div>
+                    <input type="submit" data-icon="eye" data-iconpos="notext">
+                </form>
+                <div id="viewData">
+                    <p id="enteredName"></p>
+                    <p id="selectedColour"></p>
+                    <p id="selectedNumber"></p>
+                </div>
+            </div>
+             <div data-role="footer" data-position="fixed">
+                <h3>See your future</h3>
+            </div>
+        </div>
+
+
+
+</body>
+</html>
